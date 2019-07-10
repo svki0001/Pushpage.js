@@ -1,0 +1,1 @@
+alert(PushpageHelper.getUrlParameterValue('ppscript'));

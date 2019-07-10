@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>pushpage.js</title>
+
+    <script src="../dist/pushpage.min.js"></script>
+
+    <link href="demo.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>pushpage.js</h1>
+    <nav>
+        <a href="?pp1">Pushpage 1</a>
+        <a href="?pp2">Pushpage 2</a>
+        <a href="?ppscript=Hello World">Pushpage Script</a>
+    </nav>
+    <section id="container"></section>
+
+    <script>
+        let Container = document.getElementById('container');
+
+        let pp1 = new Pushpage({
+            container: Container,
+            fileUrl: 'pushpages/pp1.html',
+            urlParamName: 'pp1'
+        });
+        let pp2 = new Pushpage({
+            container: Container,
+            fileUrl: 'pushpages/pp2.html',
+            urlParamName: 'pp2'
+        });
+        let ppscript = new Pushpage({
+            container: Container,
+            fileUrl: 'pushpages/ppscript.html',
+            urlParamName: 'ppscript',
+            scriptUrl: 'demo.js'
+        });
+
+        let pa = [pp1, pp2, ppscript];
+
+        let pc = new PushpageCollection(pa);
+    </script>
+</body>
+
+</html>
