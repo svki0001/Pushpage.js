@@ -1,6 +1,6 @@
 # pushpage.js
 
-EC6 framework for dynamic stacked popups.
+ES6 framework for dynamic stacked popups.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/svki0001/pushpage.js/blob/master/LICENSE)
 
