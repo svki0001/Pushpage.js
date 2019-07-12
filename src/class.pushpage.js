@@ -86,8 +86,6 @@ class Pushpage {
                 // add active class to container
                 this.Container.classList.add('pushpage-container-active');
 
-                // append html to container
-                this.DivElement.innerHTML = response.activeElement.innerHTML;
 
                 // insert element in the right index position
                 if (openDivElements[options.index]) {
@@ -95,6 +93,9 @@ class Pushpage {
                 } else {
                     this.Container.appendChild(this.DivElement);
                 }
+
+                // append html to container
+                this.DivElement.innerHTML = response.documentElement.innerHTML;
 
                 // bind close buttons
                 this.bindCloseClick();
